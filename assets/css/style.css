@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-image: url(../image/taylor\ -\ playlist\ by\ micaaela\ _\ Spotify.jpg);
+    background-size: cover;
+}
+
+.container {
+    background-color: rgb(235, 16, 89);
+    display: flex; /* agar element didalanya dapat diatur secara flexsibel */
+    flex-direction: column; /* agar element di dalamnya secara otomatis berbentuk kolom */
+    align-items: center; /* agar element di dalamnya menjadi rata tengah */
+    gap: 20px; /* agar setiap element memiliki jarak 20px */
+    border-radius: 6px; /* agar membentuk sudut pada element ini */
+    padding: 1rem; /* memberi batas jarak dalam antara konten */
+}
+
+.item {
+    background-color: rgb(250, 149, 166);
+    /* memberikan jarak padding 1rem untuk top dan bottom, 10rem untuk */
+    padding: 1rem 10rem; /* 1 rem = 16 px */ 
+    width: 100%;
+    text-align: center;
+    cursor: pointer; /*memberikan icon jari ketika telunjuk ketika kursor berada di element */
+    transition: all 0.3 ease; /* memberikan transisi agar smooth */   
+}
+
+.item:hover {
+    background-color: lightpink;
+    /* memberikan efek transformasi */
+    transform: translateY(-1px);
+}
+
+.item a{
+    text-decoration: none;
+    color: rgb(77, 22, 22);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+    .item {
+        padding: 1rem 3rem \;
+    }
+    .container {
+        width: 100%;
+    }
+}
